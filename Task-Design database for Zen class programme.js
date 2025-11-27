@@ -1,7 +1,3 @@
-// ------------------------------------------
-// Part 1: Database Design & Data Insertion
-// ------------------------------------------
-
 // 1. Users Collection
 db.users.insertMany([
   { "_id": 1, "name": "Chandran", "email": "chandran@gmail.com", "mentor_id": 1 },
@@ -60,9 +56,8 @@ db.attendance.insertMany([
 ]);
 
 
-// ------------------------------------------
-// Part 2: Solution Queries
-// ------------------------------------------
+
+// Queries
 
 // 1. Find all the topics and tasks which are thought in the month of October
 db.topics.find({
@@ -126,4 +121,5 @@ db.attendance.find({
     date: { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
     present: false,
     task_submitted: false
+
 });
